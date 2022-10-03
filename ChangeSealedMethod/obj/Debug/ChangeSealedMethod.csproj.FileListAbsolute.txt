@@ -1,0 +1,13 @@
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\bin\Debug\ChangeSealedMethod.exe.config
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\bin\Debug\ChangeSealedMethod.exe
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\bin\Debug\ChangeSealedMethod.pdb
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\obj\Debug\ChangeSealedMethod.csproj.AssemblyReference.cache
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\obj\Debug\ChangeSealedMethod.csproj.SuggestedBindingRedirects.cache
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\obj\Debug\ChangeSealedMethod.csproj.CoreCompileInputs.cache
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\obj\Debug\ChangeSealedMethod.exe
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\obj\Debug\ChangeSealedMethod.pdb
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\bin\Debug\0Harmony.dll
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\bin\Debug\0Harmony.xml
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\obj\Debug\ChangeSealedMethod.csproj.CopyComplete
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\bin\Debug\Newtonsoft.Json.dll
+C:\_2022___\_Rabota__HH__Source__My\ChangeSealedMethod\ChangeSealedMethod\bin\Debug\Newtonsoft.Json.xml
