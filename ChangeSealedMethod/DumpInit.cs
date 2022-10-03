@@ -57,7 +57,7 @@ namespace ChangeSealedMethod
         }
 
 
-        internal void GetValue_()
+        public void GetValue_()
         {
             Console.WriteLine("DumpInit - GetValue_");
         }

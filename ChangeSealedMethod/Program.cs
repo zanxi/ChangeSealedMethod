@@ -23,7 +23,7 @@ namespace ChangeSealedMethod
     {
         static void Main(string[] args)     
         {
-            
+
             //var harmony = new Harmony("FakeMethod - GetVlaue");
 
             //var original = typeof(JsonConverter).GetMethod("SerializeObject", new[] { typeof(object) } );
@@ -31,46 +31,45 @@ namespace ChangeSealedMethod
             //var postfix = typeof(TimeSpanCounter).GetMethod(nameof(TimeSpanCounter.After));
             //harmony.Patch(original, new HarmonyMethod(prefix), new HarmonyMethod(postfix));
 
+            
+            DumpInit d0;
+            d0 = new DumpInit("dump0", "127.0.0.1");
+            // оригинад метода класса
+            d0.GetValue_();
+            Thread.Sleep(300);
 
-
-            DumpInit d1,d2,d3;
-            DumpInitFake d1f;
-
-            d1 = new DumpInit("dump1", "127.0.0.1");
-            d1f = new DumpInitFake();
-            d1 = new DumpInit("dump1", "127.0.0.1");
-            d2 = new DumpInit("dump2", "127.0.0.1");
-            d3 = new DumpInit("dump3", "127.0.0.1");
-
-            //var source = typeof(DumpInit).GetMethod(nameof(DumpInit.GetValue_));
-            var source = d1.GetType().GetMethod(nameof(DumpInit.GetValue_),
-                new Type[] {  });
-
-            //var methodInfo = typeof(DumpInit).GetType().GetMethod("GetValue_", BindingFlags.Instance | BindingFlags.NonPublic);
-
-            //System.Type t = System.Type.GetType("DumpInit");
-            //System.Reflection.MethodInfo mi = t.GetMethod("GetValue_",
-            //System.Reflection.BindingFlags.Static | BindingFlags.Public);
-
-            //var dest = typeof(DumpInitFake).GetMethod(nameof(DumpInitFake.GetValue_));
-            var dest = d1f.GetType().GetMethod(nameof(DumpInitFake.GetValue_));
-
+            // здесь происходят основные чудеса подмены метода основного класса
+            // на метод фейкового класса
+            var source = typeof(DumpInit).GetMethod(nameof(DumpInit.GetValue_));
+            var dest = typeof(DumpInitFake).GetMethod(nameof(DumpInitFake.GetValue_));
             HarmonyLib.Memory.DetourMethod(source, dest);
 
 
-            for (int k=0; k<10;k++)
-            {
+
+
+            DumpInit d1,d2,d3;
+            
+            d1 = new DumpInit("dump1", "127.0.0.1");            
+            d1 = new DumpInit("dump1", "127.0.0.1");
+            d2 = new DumpInit("dump2", "127.0.0.1");
+            d3 = new DumpInit("dump3", "127.0.0.1");
+                        
+
+            for (int k=0; k<3;k++)
+            {                
                 d1.GetValue_();
                 d2.GetValue_();
-                d3.GetValue_();
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
             }
 
 
+            d0.Close();
             d1.Close();
             d2.Close();
-
             d3.Close();
+
+            Console.WriteLine("Press key");
+            Console.ReadKey();
 
         }
     }
