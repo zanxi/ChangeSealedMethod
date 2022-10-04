@@ -47,16 +47,16 @@ namespace ChangeSealedMethod
 
 
 
-            DumpInit d1,d2,d3;
-            
-            d1 = new DumpInit("dump1", "127.0.0.1");            
+            DumpInit d1,d2;
+                        
             d1 = new DumpInit("dump1", "127.0.0.1");
             d2 = new DumpInit("dump2", "127.0.0.1");
-            d3 = new DumpInit("dump3", "127.0.0.1");
+            
                         
 
             for (int k=0; k<3;k++)
-            {                
+            {
+                d0.GetValue_();
                 d1.GetValue_();
                 d2.GetValue_();
                 Thread.Sleep(500);
@@ -66,7 +66,7 @@ namespace ChangeSealedMethod
             d0.Close();
             d1.Close();
             d2.Close();
-            d3.Close();
+            
 
             Console.WriteLine("Press key");
             Console.ReadKey();

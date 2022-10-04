@@ -59,7 +59,7 @@ namespace ChangeSealedMethod
 
         public void GetValue_()
         {
-            Console.WriteLine("DumpInit - GetValue_");
+            Console.WriteLine("DumpInit - GetValue_ - " + nameSub);
         }
 
         internal void SetValue(int id, string name)
@@ -86,6 +86,7 @@ namespace ChangeSealedMethod
                 }
                 else thrDump = null;
             }
+            Console.WriteLine("Stop DumpInit - "+nameSub);
             dump.Close();
         }
                
